@@ -1,0 +1,276 @@
+@charset "utf-8";
+/* CSS Document */
+/************FONTS*****************/
+/* Regular */
+@font-face {
+    font-family: 'League Gothic';
+    src: url('leaguegothic-italic-webfont.eot');
+    src: url('leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('leaguegothic-italic-webfont.woff') format('woff'),
+         url('leaguegothic-italic-webfont.ttf') format('truetype'),
+         url('leaguegothic-italic-webfont.svg#league_gothic_italicregular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+/* Italic */
+@font-face {
+    font-family: 'League Gothic';
+    src: url('leaguegothic-regular-webfont.eot');
+    src: url('leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('leaguegothic-regular-webfont.woff') format('woff'),
+         url('leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* Condensed */
+@font-face {
+    font-family: 'League Gothic Condensed';
+    src: url('leaguegothic-condensed-regular-webfont.eot');
+    src: url('leaguegothic-condensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('leaguegothic-condensed-regular-webfont.woff') format('woff'),
+         url('leaguegothic-condensed-regular-webfont.ttf') format('truetype'),
+         url('leaguegothic-condensed-regular-webfont.svg#league_gothic_condensed-Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* Condensed Italic */
+@font-face {
+    font-family: 'League Gothic Condensed';
+    src: url('leaguegothic-condensed-italic-webfont.eot');
+    src: url('leaguegothic-condensed-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('leaguegothic-condensed-italic-webfont.woff') format('woff'),
+         url('leaguegothic-condensed-italic-webfont.ttf') format('truetype'),
+         url('leaguegothic-condensed-italic-webfont.svg#league_gothic_condensed_itaRg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Just a heads up, please do not add any "a" tags as the Javascript calls upon that tag in a specific order*/
+
+
+/*************main tags******************/
+html{ background-color:#ccc; }
+
+
+/*Actual touchscreen size/main wrapper*/
+#canvas{
+	background-color:#ccc;
+	height:900px;
+	width:1900px;
+	padding-top:100px;
+	margin-left:50px;
+}
+
+/*Live area for map/classrooms...etc*/
+#activeArea{
+	width:1120px;
+	height:488px;
+	background-color:#ccc;
+	margin-left:200px;
+	position:absolute;
+
+}
+
+/*touchscreen location and styling/keep location intact as the JS depends on it*/
+#touchScreen{
+	height:30px;
+	color:#fff;
+	width:50px;
+	background-color:red;
+	position:absolute;
+	top:117px;
+	margin-left:822px;
+}
+
+/**********header tags******************/
+header { width:100%; background:#ccc; }
+#topHeader { max-width:1120px; margin:0 auto; padding:1em 0;  } 
+#logo { max-width:100px;  margin:0;   }
+h1{
+	text-align:center;
+	font-weight:bold;
+	color:red;
+	font-size:1.3em;
+}
+h3{ text-align:left; margin:0 .5em; }
+
+h2{	text-align:left;
+	font-weight:bold;
+	color:#000;
+	font-family:'League Gothic', sans-serif; 
+	margin-left:280px;
+	border-bottom:solid #333 2px; 
+	width:30%; 
+}
+
+
+/*************pop ups***********************/
+/*keep all classes and Id's intact for the JS*/
+.pop{width:0px;height:0px;background-color:#ccc;position:absolute;left:350px;top:250px;z-index:0;opacity:0;}
+img { max-width:500px; width:100%; margin:0 auto; }
+
+/*****************restart*******************/
+/*keep all classes and Id's intact for the JS*/
+#restart{width:200px;height:100px;position:absolute;left:500px;top:300px;background-color:#ccc;opacity:0;}
+
+/*Arrow color*/
+/*this is a universal class amongst the arrows that can manipulate just the COLOR*/
+.arrowColor{background-color:#000;}
+
+
+
+
+/***************************************DON'T GO BEYOND THIS POINT***************************************/
+
+/**************arrows********************/
+/*keep all classes and Id's intact for the JS*/
+/*keep all positions and opacities intact for JS*/
+.arrowColor{background-color:#000;}
+
+#oneArrowA{width:0;height:10px;right:940px;position:absolute;opacity:0;top:122px;}
+#oneArrowB{width:10px;height:0px;margin-left:170px;position:absolute;opacity:0;bottom:330px;}
+#twoArrow{height:0px;width:10px;margin-left:170px;bottom:338px;position:absolute;opacity:1;}
+#threeArrow{height:0px;width:10px;margin-left:419px;bottom:335px;position:absolute;opacity:0;}
+#fourArrow{height:0px;width:10px;margin-left:432px;bottom:335px;position:absolute;opacity:0;z-index:30;}
+#fiveArrow{height:0;width:10px;margin-left:680px;bottom:335px;position:absolute;opacity:0;z-index:30;}
+#sixArrow{height:0px;width:10px;margin-left:694px;bottom:335px;position:absolute;opacity:0;z-index:30;}
+#sevenArrow{height:0px;width:10px;margin-left:941px;bottom:335px;position:absolute;opacity:0;z-index:30;}
+#eightArrow{height:10px;width:0px;margin-left:941px;top:120px;position:absolute;opacity:0;z-index:30;}
+#nineArrow{height:10px;width:0px;right:944px;top:230px;position:absolute;opacity:0;z-index:30;}
+#nineArrowB{height:0px;width:10px;margin-left:170px;top:150px;position:absolute;opacity:0;z-index:30;}
+#tenArrow{height:95px;width:10px;margin-left:930px;top:160px;position:absolute;opacity:0;z-index:30;}
+#tenArrowExtB{height:10px;width:27px;margin-left:938px;top:245px;position:absolute;opacity:0;z-index:30;}
+#tenArrowExt{height:20px;width:10px;margin-left:955px;top:225px;position:absolute;opacity:0;z-index:30;}
+
+
+#leftArrow{width:0px;height:10px;margin-left:236px;top:150px;opacity:0;position:absolute;right:270px;}
+/*#fillerArrow{width:800px;height:10px;color:#000;top:150px;position:absolute;margin-left:200px;opacity:1;}*/
+#rightArrow{width:0px;height:10px;margin-left:836px;opacity:0;top:150px;position:absolute;}
+
+
+
+
+
+/**************room styles****************/
+
+#one{
+	background-image:url(../img/515.jpg);
+	position:absolute;
+	top:20px;
+	left:36px;
+}
+
+#two{
+	background-image:url(../img/514.jpg);
+	position:absolute;
+	top:0px;
+	margin-left:167px;
+}
+
+#three{
+	background-image:url(../img/513.jpg);
+	position:absolute;
+	top:20px;
+	margin-left:298px;
+}
+
+#four{
+	background-image:url(../img/511.jpg);
+	position:absolute;
+	top:20px;
+	margin-left:429px;
+}
+
+#five{
+	background-image:url(../img/509.jpg);
+	position:absolute;
+	top:20px;
+	margin-left:560px;
+}
+
+#six{
+	background-image:url(../img/507.jpg);
+	position:absolute;
+	top:20px;
+	margin-left:691px;
+}
+
+#seven{
+	background-image:url(../img/506.jpg);
+	position:absolute;
+	top:0px;
+	margin-left:822px;
+}
+
+#eight{
+	background-image:url(../img/505.jpg);
+	position:absolute;
+	top:20px;
+	margin-left:953px;
+}
+
+#nine{
+	background-image:url(../img/516.jpg);
+	position:absolute;
+	top:132px;
+	left:36px;
+}
+
+#ten{
+	background-image:url(../img/504.jpg);
+	position:absolute;
+	top:132px;
+	margin-left:953px;
+}
+
+#stairsLeft{background-image:url(../img/stairLeft.jpg);width:81px;height:47px;position:absolute;top:275px;left:0;}
+#library{background-image:url(../img/library.png);width:201px;height:210px;position:absolute;top:277px;left:30px;z-index:30;}
+#ramp1{background-image:url(../img/RampUpRt.jpg);width:33px;height:202px;position:absolute;top:285px;left:231px;}
+#ramp2{background-image:url(../img/RampDownRt.jpg);width:33px;height:202px;position:absolute;top:285px;left:264px;}
+#gallery{background-image:url(../img/gallery.jpg);width:521px;height:202px;position:absolute;top:285px;left:297px;}
+#ramp3{background-image:url(../img/RampDownRt.jpg);width:33px;height:202px;position:absolute;top:285px;left:818px;}
+#ramp4{background-image:url(../img/RampUpRt.jpg);width:33px;height:202px;position:absolute;top:285px;left:851px;}
+#eleven{background-image:url(../img/502.jpg);width:152px;height:101px;position:absolute;top:285px;left:884px;}
+#stairsRight{background-image:url(../img/stairsRight.png);width:82px;height:47px;position:absolute;top:285px;left:1036px;}
+
+.roomStyle1{
+	width:131px;
+	height:112px;
+	text-align:center;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.roomStyle2{
+	width:131px;
+	height:117px;
+	text-align:center;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+/*************room pics***********************/
+.511pic{width:100%;max-width:400px;max-height:400px;}
+
+/***clearfix***/		
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.clearfix {
+	/*display: inline-block;*/
+}
+html[xmlns] .clearfix {
+	display: block;
+}
+* html .clearfix {
+	height: 1%;
+}
