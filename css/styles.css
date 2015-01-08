@@ -123,7 +123,7 @@ h2{	text-align:left;
 .youAreHere { width:60px; height:15px;  display:table-cell; background:red; text-align:center; font-weight:bold; }
 .keyroomNumber {width:200px; text-align:left; display:table-cell; padding:.25em .75em;  }
 
-h4 { font-family:'League Gothic', sans-serif; font-size:1.5em; font-style:italic; margin:.5em 0; }
+h4 { font-family:'League Gothic', sans-serif; font-size:1.5em; font-style:italic; margin:.5em; color:#fff; }
 /*************pop ups***********************/
 /*keep all classes and Id's intact for the JS*/
 .pop{width:0px;height:0px;background-color:#444; position:absolute; left:0px; top:0px;z-index:-5; opacity:0; border:5px solid #666;}
