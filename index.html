@@ -2,68 +2,100 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Interactive Floor Plan</title>
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 
 <body>
 
 	<header>
-    <div id="topHeader">
-    	<img src="img/pti.png" id="logo" alt="Image of PTI's logo" /><h3>Directions your way</h3>
-        
-    </div>
+    <img id="banner" alt="an animated GIF informing users that this is an interatice map" src="img/Open_Banner.gif">
     </header>
-	<h2>Please select your destination</h2>
-	<div id="canvas">
+    <div id="key">
+    	<h4>Classroom Key</h4>	
+        <div class="keyroomType">
+             <div class="keycolor"></div><div class="keyroomNumber">Graphic Design Lab</div>
+        </div>
+        <div class="keyroomType">
+         	<div class="keycolor1"></div><div class="keyroomNumber">Instruction Lab</div>                  
+        </div>
+        <div class="keyroomType">
+           	<div class="keycolor2"></div><div class="keyroomNumber">Hospitality Lab</div>                  
+        </div>
+        <div class="keyroomType">
+           	<div class="keycolor3"></div><div class="keyroomNumber">Safety and Security</div>                  
+        </div> 
+        <div class="keyroomType">
+           	<div class="youAreHere">X</div><div class="keyroomNumber">You Are Here.</div>                  
+        </div>  
+    </div>
     
+	<div id="canvas">
     	<div id="activeArea">
         	<div id="backRow">
                 <div id="one" class="roomStyle2">
-                515
+                	<div class="roomType">
+                    	<div class="color1"></div><div class="roomNumber">515</div>                  
+                    </div>
                 </div>
                 <div id="oneArrowA" class="arrowColor"></div>
                 <div id="oneArrowB" class="arrowColor"></div>
                 
                 <div id="two" class="roomStyle2">
-                514
+                	<div class="roomType">
+                    	<div class="color"></div><div class="roomNumber">514</div>                  
+                    </div>
                 </div>
                 <div id="twoArrow" class="arrowColor"></div>
                 
                 <div id="three" class="roomStyle2">
-                513
+                	<div class="roomType">
+                    	<div class="color2"></div><div class="roomNumber">513</div>                  
+                    </div>
                 </div>
                 <div id="threeArrow" class="arrowColor"></div>
                 
                 <div id="four" class="roomStyle2">
-                511
+                	<div class="roomType">
+                    	<div class="color"></div><div class="roomNumber">511</div>                  
+                    </div> 
                 </div>
                 <div id="fourArrow" class="arrowColor"></div>
                 
                 <div id="five" class="roomStyle2">
-                509
+                	<div class="roomType">
+                    	<div class="color"></div><div class="roomNumber">509</div>                  
+                    </div>
                 </div>
                 <div id="fiveArrow" class="arrowColor"></div>
                 
                 <div id="six" class="roomStyle2">
-                507
+                	<div class="roomType">
+                    	<div class="color"></div><div class="roomNumber">507</div>                  
+                    </div>
                 </div>
                 <div id="sixArrow" class="arrowColor"></div>
                 
-                <div id="seven" class="roomStyle2">
-                506
+                <div id="seven" class="roomStyle2">              	
+                    <div class="roomType">
+                    	<div class="color"></div><div class="roomNumber">506</div>                  
+                    </div>
                 </div>
                 <div id="sevenArrow" class="arrowColor"></div>
                 
                 <div id="eight" class="roomStyle1">
-                505
+                	<div class="roomType">
+                    	<div class="color"></div><div class="roomNumber">505</div>                  
+                    </div>
                 </div>
                 <div id="eightArrow" class="arrowColor"></div>
             </div><!--end #backRow-->
+
             
             <div id="touchScreen">
-            
+            X
             </div>
             
            <!-- <div id="fillerArrow" class="clearfix">
@@ -81,20 +113,29 @@
             </div>
             
             
+            <div id="downArrow" class="arrowColor">
+            
+            </div>
             
             <div id="midBackRow">
             	<div id="nine" class="roomStyle1">
-                516
+                	<div class="roomType">
+                    	<div class="color"></div><div class="roomNumber">516</div>                  
+                    </div> 
                 </div>
                 <div id="nineArrow" class="arrowColor"></div>
                 <div id="nineArrowB" class="arrowColor"></div>
                 
                 <div id="ten" class="roomStyle1">
-                504
+                	<div class="roomType">
+                    	<div class="color"></div><div class="roomNumber">504</div>                  
+                    </div>
+                </div>
+                <div id="tenArrow" class="arrowColor">
+                
                 </div>
                 <div id="tenArrow" class="arrowColor"></div>
-                <div id="tenArrowExt" class="arrowColor"></div>
-                <div id="tenArrowExtB" class="arrowColor"></div>
+               <div id="tenArrowB" class="arrowColor"></div>
                 
             </div><!--end #midBackRow-->
             
@@ -102,70 +143,1543 @@
             
             
             <div id="backRow1">
+            	<div id="elevator"></div>
+                
+                
+                <div id="mensRoom">
+                
+                </div>
+                <div id="mensArrow" class="arrowColor"></div>
+                
+                <div id="twelve">
+                	<div class="roomType">
+                    	<div class="color"></div><div class="roomNumber">512</div>                  
+                    </div> 
+                </div>
+                <div id="twelveArrow" class="arrowColor"></div>
+                
+                <div id="thirteen">
+                	<div class="roomType">
+                    	<div class="color"></div><div class="roomNumber">510</div>                  
+                    </div>
+                </div>
+                <div id="thirteenArrow" class="arrowColor"></div>
+                
+                <div id="fourteen">
+                	<div class="roomType">
+                    	<div class="color"></div><div class="roomNumber">508</div>                  
+                    </div>
+                </div>
+                <div id="fourteenArrow" class="arrowColor"></div>
+                
+                <div id="military">
+                	<div id="roomTypeMilitary">
+                    	<div class="color4"></div><div class="roomNumber">M. Lounge</div>                  
+                    </div> 
+                     
+                </div>
+                <div id="militaryArrow" class="arrowColor"></div> 
+                <div id="eleven">
+               		<div class="roomType">
+                    	<div class="color3"></div><div class="roomNumber">502</div>                  
+                    </div>
+                </div>
+                <div id="elevenArrow" class="arrowColor"></div>
+                
+                <div id="fifteen">
+                	<div class="roomType">
+                    	<div class="color3"></div><div class="roomNumber">501</div>                  
+                    </div>
+                </div>
+                <div id="fifteenArrow" class="arrowColor"></div>
+                
+                
+                <div id="ladiesRoom">
+                
+                </div>
+                <div id="ladiesArrow" class="arrowColor"></div>
+                
+                
             	<div id="stairsLeft"></div>
-                <div id="library"></div>
+                <div id="library">
+                	<div class="roomType2">
+                    	<div class="color5"></div><div class="roomNumber">Library</div>                  
+                    </div>
+                </div>
+                <div id="libraryArrow" class="arrowColor"></div>
+                <div id="libraryArrow2" class="arrowColor"></div>
+                
             	<div id="ramp1"></div>
                 <div id="ramp2"></div>
-            	<div id="gallery"></div>
+            	<div id="gallery">
+                	<div class="roomType2">
+                    	<div class="roomNumber">Gallery</div>                  
+                    </div>
+                </div>
+                <div id="galleryArrow" class="arrowColor"></div>
+                <div id="galleryArrow2" class="arrowColor"></div>
+                
                 <div id="ramp3"></div>
                 <div id="ramp4"></div>
-                <div id="eleven"></div>
                 <div id="stairsRight"></div>
             </div>
             
-            <div id="popUps">
-            	<div id="onePopUp" class="pop">
-                <h3>#515</h3><p>Instruction Lab</p>
-                <img src="img/PHOTO_515.JPG" alt="image of room 515, an instruction lab" />
+          
                 
-                <a href="#">Get Diretions"</a>                
-                <a href="#">Close</a></div>
+             <div id="popUps"> 
+            	<div id="onePopUp" class="pop">
+					<div class="roomTypePop">
+                    	<div class="colorPop1"></div>
+                        <div class="roomNumberPop"><h3>#515</h3></div>                  		
+                        <div class="roomNamePop">Instruction Lab</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_515.JPG" alt="image of room 515, an instruction lab" />	
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="1">Monday </h5><p class="weekbutton show" target="1">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="2">Tuesday </h5><p class="weekbutton show" target="2">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="3">Wednesday </h5><p class="weekbutton show" target="3">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="4">Thursday </h5><p class="weekbutton show" target="4">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="5">Friday </h5><p class="weekbutton show"  target="5">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div1" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+
+                            <div id="div2" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> TUESDAY WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div3" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> WED WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                             
+                            <div id="div4" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> thurs WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div5" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Friday WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="oneButton">Get Directions</a>                
+                	<a href="#" id="oneClose">Close</a>
+                	</div>
+                </div>
                 <div id="twoPopUp" class="pop">
-                <h3>#514</h3><p>Graphic Design Studio</p>
-                 <img src="img/PHOTO_514.JPG" alt="image of room 514, an instruction lab" />  
-                <a href="#">Get Diretions"</a><a href="#">Close</a></div>
+					<div class="roomTypePop">
+                    	<div class="colorPop"></div>
+                        <div class="roomNumberPop"><h3>#514</h3></div>
+           				<div class="roomNamePop">Graphic Design Studio</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_514.JPG" alt="image of room 514, an instruction lab" />  
+                    </div>
+               		<div class="roomDetails">                		
+                       <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="36">Monday </h5><p class="weekbutton show" target="36">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="37">Tuesday </h5><p class="weekbutton show" target="37">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="38">Wednesday </h5><p class="weekbutton show" target="38">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="39">Thursday </h5><p class="weekbutton show" target="39">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="40">Friday </h5><p class="weekbutton show"  target="40">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div36" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Juvenile Justice</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Human Relations In Org</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> International Business</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Cst Review</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>                 
+                            </ul>
+                            </div>
+
+                            <div id="div37" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 10:20 am:</strong> Open</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Effective Speech</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Physical Science</li>                         
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Intro to Hospitality & Casino</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div38" class="targetDiv">
+                            <ul>                   
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:30 am:</strong> Economics</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Static & Strengths of Materials</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Art History</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Coding for Med. Assistant</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                             
+                            <div id="div39" class="targetDiv">
+                            <ul> 
+                            <li><strong>7:20 am - 8:20 am:</strong> Open</li>                 
+                            <li><strong>8:20 am - 10:20 am:</strong> Pharmacology - Surg Tecg</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Effective Speech</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Effective Speech</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Advertising & Promotions</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div40" class="targetDiv">
+                            <ul>
+                            <li><strong>8:20 am - 9:10 am:</strong> Pharmacology - Surg Tecg</li>
+                            <li><strong>9:30 am - 10:20 am:</strong> Medical Office Admin</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Professional Selling</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Business Law</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Autocad</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Architectural Appl Sotware 2</li>
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="twoButton">Get Directions</a>                
+                	<a href="#" id="twoClose">Close</a>
+                	</div>
+                </div>
                 <div id="threePopUp" class="pop">
-                <h3>#513</h3><p>Hospitality Lab</p>
-                 <img src="img/PHOTO_513.JPG" alt="image of room 513, an instruction lab" /> 
-                <a href="#">Get Diretions"</a><a href="#">Close</a></div>
+                <div class="roomTypePop">
+                    	<div class="colorPop2"></div>
+                        <div class="roomNumberPop"><h3>#513</h3></div>
+           				<div class="roomNamePop">Hospitality Lab</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_513.JPG" alt="image of room 513, an instruction lab" />
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="41">Monday </h5><p class="weekbutton show" target="41">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="42">Tuesday </h5><p class="weekbutton show" target="42">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="43">Wednesday </h5><p class="weekbutton show" target="43">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="44">Thursday </h5><p class="weekbutton show" target="44">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="45">Friday </h5><p class="weekbutton show"  target="45">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div41" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 9:10 am:</strong> Medical Office Admin</li>
+                            <li><strong>9:20 am - 10:20 am:</strong> Open</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Food & Beverage Mgmt</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Front Office Procedures 2</li>
+                            <li><strong>2:40 pm - 11:00 pm:</strong> Open</li>                
+                            </ul>
+                            </div>
+
+                            <div id="div42" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 pm:</strong> Casino & Opt Mgmt</li>
+                            <li><strong>10:30 am - 11:20 am:</strong> Career Developement</li>                         
+                            <li><strong>11:30 am - 12:20 pm:</strong> Steps to Career Success 2</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Nutrition & Menu Planning</li>
+                            <li><strong>2:30 pm - 4:20 pm:</strong> Energy Technology</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div43" class="targetDiv">
+                            <ul>                   
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:30 am:</strong> Elements of Wine & Spirits</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Open</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Food & Beverage Mgmt</li>
+                            <li><strong>2:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                       
+                            <div id="div44" class="targetDiv">
+                            <ul> 
+                            <li><strong>7:20 am - 8:20 am:</strong> Open</li>                 
+                            <li><strong>8:20 am - 10:20 am:</strong> Small Business Mgmt</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Internal Travel</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Club & Restaurant Mgmt</li>
+                            <li><strong>2:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div45" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:20 am:</strong> Open</li>                 
+                            <li><strong>8:20 am - 10:20 am:</strong> Club & Restaurant Mgmt</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Coding for Med. Assistant</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Nutrition & Menu Planning</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong>Front Office Procedures 2</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="threeButton">Get Directions</a>                
+                	<a href="#" id="threeClose">Close</a>
+                	</div>
+               </div>
+               
                 <div id="fourPopUp" class="pop"> 
-                <h3>#511</h3><p>Graphic Design Studio</p>
-                 <img src="img/PHOTO_511.JPG" alt="image of room 511, an instruction lab" /> 
-                <a href="#">Get Diretions"</a><a href="#">Close</a></div>
+                <div class="roomTypePop">
+                    	<div class="colorPop"></div>
+                        <div class="roomNumberPop"><h3>#511</h3></div>
+           				<div class="roomNamePop">Graphic Design Studio</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_511.JPG" alt="image of room 511, an instruction lab" />
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="46">Monday </h5><p class="weekbutton show" target="46">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="47">Tuesday </h5><p class="weekbutton show" target="47">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="48">Wednesday </h5><p class="weekbutton show" target="48">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="49">Thursday </h5><p class="weekbutton show" target="49">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="50">Friday </h5><p class="weekbutton show"  target="50">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div46" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 10:20 am:</strong> Open</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Fund of Ckng/sanitation & Sfty</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Static & Strengths of Materials</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Introduction to Healthcare</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>                
+                            </ul>
+                            </div>
+
+                            <div id="div47" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 pm:</strong> Critical Thinking</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Ethics</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Social Problems</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Healthcare Delivery</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div48" class="targetDiv">
+                            <ul>                   
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:30 am:</strong> Elements of Wine & Spirits</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Open</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Food & Beverage Mgmt</li>
+                            <li><strong>2:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                       
+                            <div id="div49" class="targetDiv">
+                            <ul> 
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>                 
+                            <li><strong>8:20 am - 11:20 am:</strong> Acute Care of the Adult</li>
+                            <li><strong>11:30 am - 12:20 pm:</strong> Open</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Social Problems</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Intro To Business</li>
+                            <li><strong>4:40 pm - 4:30 pm:</strong> Close</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div50" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Critical Thinking</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Critical Thinking</li>
+                            <li><strong>12:30 pm - 1:20 pm:</strong> Chart Abstracting & Coding</li>
+                            <li><strong>1:30 pm - 4:30 pm:</strong> Reimbursement Methods</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li> 
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="fourButton">Get Directions</a>                
+                	<a href="#" id="fourClose">Close</a>
+                	</div>
+                 </div>
+                
                 <div id="fivePopUp" class="pop">
-                <h3>#509</h3><p>Graphic Design Studio</p>
-                 <img src="img/PHOTO_509.JPG" alt="image of room 509, an instruction lab" /> 
-                <a href="#">Get Diretions"</a><a href="#">Close</a></div>
+                <div class="roomTypePop">
+                    	<div class="colorPop"></div>
+                        <div class="roomNumberPop"><h3>#509</h3></div>
+           				<div class="roomNamePop">Graphic Design Studio</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_509.JPG" alt="image of room 509, an instruction lab" />
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="51">Monday </h5><p class="weekbutton show" target="51">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="52">Tuesday </h5><p class="weekbutton show" target="52">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="53">Wednesday </h5><p class="weekbutton show" target="53">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="54">Thursday </h5><p class="weekbutton show" target="54">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="55">Friday </h5><p class="weekbutton show"  target="55">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div51" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 9:10 am:</strong> Rooms & Facilities Mgmt</li>
+                            <li><strong>9:30 am - 11:20 pm:</strong> Psych/Mental Hlth Nursing</li>
+                            <li><strong>11:30 am - 12:20 pm:</strong> Career Developement</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Psych/Mental Hlth Nursing</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Drawing</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>                
+                            </ul>
+                            </div>
+
+                            <div id="div52" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 pm:</strong> Hospitality Supervision</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Fund of Ckng/sanitation & Sfty</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Business Ethics</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Personal Finance</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div53" class="targetDiv">
+                            <ul>                   
+                           <li><strong>7:20 am - 11:20 am:</strong> Transition into Nursing Practice</li>                 
+                            <li><strong>11:30 am - 12:20 pm:</strong> Open</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Care of Adults w/ Chronic...</li>                 
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Crtical Thinking</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                       
+                            <div id="div54" class="targetDiv">
+                            <ul> 
+                            <li><strong>7:20 am - 10:20 am:</strong> Open</li>                 
+                            <li><strong>10:30 am - 12:20 pm:</strong> Professional Selling</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Effective Speech</li>                 
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Crtical Thinking</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div55" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Casino & Operation Mgmt</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Critical Thinking</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Anatomy & Physiology 2</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Drawing</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li> 
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="fiveButton">Get Directions</a>                
+                	<a href="#" id="fiveClose">Close</a>
+                	</div>
+                  </div>
+                
                 <div id="sixPopUp" class="pop">
-                <h3>#507</h3><p>Graphic Design Studio</p>
-                 <img src="img/PHOTO_507.JPG" alt="image of room 507, an instruction lab" /> 
-                <a href="#">Get Diretions"</a><a href="#">Close</a></div>
+					<div class="roomTypePop">
+                    	<div class="colorPop"></div>
+                        <div class="roomNumberPop"><h3>#507</h3></div>
+           				<div class="roomNamePop">Graphic Design Studio</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_507.JPG" alt="image of room 507, an instruction lab" />
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="56">Monday </h5><p class="weekbutton show" target="56">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="57">Tuesday </h5><p class="weekbutton show" target="57">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="58">Wednesday </h5><p class="weekbutton show" target="58">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="59">Thursday </h5><p class="weekbutton show" target="59">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="60">Friday </h5><p class="weekbutton show"  target="60">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div56" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 11:20 am:</strong> Anatomy & Physiology 1</li>
+                            <li><strong>11:30 am - 1:20 pm:</strong> Critical Thinking</li>
+                            <li><strong>1:30 pm - 3:30 pm:</strong> Ethics</li>
+                            <li><strong>3:30 pm - 11:00 pm:</strong> Open</li>                
+                            </ul>
+                            </div>
+
+                            <div id="div57" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 10:20 am:</strong> Open</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Effective Speech</li>
+                            <li><strong>12:30 pm - 4:30 pm:</strong> Anatomy & Physiology 1</li>
+                            <li><strong>4:40 pm - 5:30 pm:</strong> Open</li>
+                            <li><strong>5:45 pm - 11:00 pm:</strong> Meetings</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div58" class="targetDiv">
+                            <ul>                   
+                           <li><strong>7:20 am - 8:10 am:</strong> Open</li>                 
+                            <li><strong>8:20 am - 11:20 am:</strong> Nursing Care Evolving Family</li>
+                            <li><strong>11:30 am - 12:20 pm:</strong> Open</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Crtical Thinking</li>                 
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Crtical Thinking</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                       
+                            <div id="div59" class="targetDiv">
+                            <ul> 
+                            <li><strong>7:20 am - 9:10 am:</strong> Anatomy & Physiology 1</li>                 
+                            <li><strong>9:30 am - 11:20 am:</strong> Critical Thinking</li>
+                            <li><strong>11:30 am - 12:20 pm:</strong> Steps to Career Success 1</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Diseases & Diagnostic Methods</li>                 
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Reimbursement Methods</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div60" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Small Business Mgmt.</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Psychology</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Effective Speech</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Critical Thinking</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li> 
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="sixButton">Get Directions</a>                
+                	<a href="#" id="sixClose">Close</a>
+                	</div>
+                 </div>
+                
                 <div id="sevenPopUp" class="pop">
-                <h3>#506</h3><p>Graphic Design Studio</p>
-                 <img src="img/PHOTO_506.JPG" alt="image of room 506, an instruction lab" /> 
-                <a href="#">Get Diretions</a><a href="#">Close</a></div>
+					<div class="roomTypePop">
+                    	<div class="colorPop"></div>
+                        <div class="roomNumberPop"><h3>#506</h3></div>
+           				<div class="roomNamePop">Graphic Design Studio</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_506.JPG" alt="image of room 506, an instruction lab" />
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="61">Monday </h5><p class="weekbutton show" target="61">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="62">Tuesday </h5><p class="weekbutton show" target="62">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="63">Wednesday </h5><p class="weekbutton show" target="63">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="64">Thursday </h5><p class="weekbutton show" target="64">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="64">Friday </h5><p class="weekbutton show"  target="65">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div61" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Steps to Career Success 2</li>
+                            <li><strong>8:30 am - 11:20 am:</strong> Care of Adults w/ Chronic...</li>
+                            <li><strong>11:30 am - 12:20 pm:</strong> Steps to Career Success 1</li>
+                            <li><strong>12:30 pm - 1:20 pm:</strong> Steps to Career Success 2</li>
+                            <li><strong>1:30 pm - 2:20 pm:</strong> Surgical Technology 4</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Drafting 1</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>                
+                            </ul>
+                            </div>
+
+                            <div id="div62" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Effective Speech</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Art History</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Effective Speech</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Art History</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div63" class="targetDiv">
+                            <ul>                   
+                           <li><strong>7:20 am - 9:10 am:</strong> Surgical Technology 5</li>                 
+                            <li><strong>9:20 am - 10:20 am:</strong> Open</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Tutoring</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Medical Terminonly</li>                 
+                            <li><strong>2:40 pm - 4:30 pm:</strong> English Composition 2</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                       
+                            <div id="div64" class="targetDiv">
+                            <ul> 
+                            <li><strong>7:20 am - 10:20 am:</strong> Meetings</li>                 
+                            <li><strong>10:30 am - 1:20 pm:</strong> Prof Transition to Practice</li>
+                            <li><strong>1:30 pm - 4:30 pm:</strong> Psychosocial & Psychiatric Issues</li>                       
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div65" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 9:20 am:</strong> Open</li>
+                            <li><strong>9:30 am - 12:20 pm:</strong> Foundations of Surgery</li>  
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Critical Thinking</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Drafting 1</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li> 
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="sevenButton">Get Directions</a>                
+                	<a href="#" id="sevenClose">Close</a>
+                	</div>
+                 </div>
+
                 <div id="eightPopUp" class="pop">
-                <h3>#505</h3><p>Graphic Design Studio</p>
-                 <img src="img/PHOTO_505.JPG" alt="image of room 505, an instruction lab" /> 
-                <a href="#">Get Diretions"</a><a href="#">Close</a></div>
+					<div class="roomTypePop">
+                    	<div class="colorPop"></div>
+                        <div class="roomNumberPop"><h3>#505</h3></div>
+           				<div class="roomNamePop">Graphic Design Studio</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_505.JPG" alt="image of room 505, an instruction lab" />
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="65">Monday </h5><p class="weekbutton show" target="65">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="66">Tuesday </h5><p class="weekbutton show" target="66">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="67">Wednesday </h5><p class="weekbutton show" target="67">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="68">Thursday </h5><p class="weekbutton show" target="68">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="69">Friday </h5><p class="weekbutton show"  target="69">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div65" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                           <li><strong>8:20 am - 10:20 am:</strong> Medical Terminology</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Kinesiology</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Critical Thinking</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Criminal Law</li>
+                            <li><strong>4:40 pm - 5:30 pm:</strong> Open</li>   
+                            <li><strong>5:45 pm - 11:00 pm:</strong> Medical Terminology</li>             
+                            </ul>
+                            </div>
+
+                            <div id="div66" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Steps to Career Success 3</li>
+                            <li><strong>8:20 am - 9:10 am:</strong> Nursing Care Evolving Family</li>
+                            <li><strong>9:20 am - 10:20 am:</strong> Open</li>
+                            <li><strong>10:30 am - 12:20 am:</strong> Critical Thinking</li>
+                            <li><strong>12:30 pm - 1:20 pm:</strong> Steps to Career Success 1</li>
+                            <li><strong>1:30 pm - 2:20 pm:</strong> Principles of Writing</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Effective Speech</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div67" class="targetDiv">
+                            <ul>                   
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Personal Finance</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Tutoring</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Surgical Technology 2</li>                 
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Kinesiology</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                       
+                            <div id="div68" class="targetDiv">
+                            <ul> 
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Hospitality Supervision</li>  
+                            <li><strong>10:30 am - 12:20 pm:</strong> Medical Terminology</li>  
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Critical Thinking</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Med Term/Sickness & Hlth 1</li>
+                            <li><strong>4:40 pm - 5:30 pm:</strong> Open</li> 
+                            <li><strong>5:45 pm - 11:00 pm:</strong> Auditing & Natl Exam Prep</li> 
+                            </ul>
+                            </div>
+                            
+                            <div id="div69" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 9:20 am:</strong> Open</li>
+                            <li><strong>9:30 am - 10:20 am:</strong> Career Development</li>  
+                            <li><strong>10:30 am - 12:20 pm:</strong> English Composition 1</li>  
+                            <li><strong>12:30 pm - 1:20 pm:</strong> Open</li>
+                            <li><strong>1:30 pm - 2:20 pm:</strong> Healthcare Delivery</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Alebra</li> 
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li> 
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="eightButton">Get Directions</a>                
+                	<a href="#" id="eightClose">Close</a>
+                	</div>
+                 </div>
+                
                 <div id="ninePopUp" class="pop">
-                <h3>#514</h3><p>Graphic Design Studio</p>
-                 <img src="img/PHOTO_514.JPG" alt="image of room 514, an instruction lab" /> 
-                <a href="#">Get Diretions"</a><a href="#">Close</a></div>
+					<div class="roomTypePop">
+                    	<div class="colorPop"></div>
+                        <div class="roomNumberPop"><h3>#516</h3></div>
+           				<div class="roomNamePop">Graphic Design Studio</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_516.JPG" alt="image of room 516, an instruction lab" /> 
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="31">Monday </h5><p class="weekbutton show" target="31">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="32">Tuesday </h5><p class="weekbutton show" target="32">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="33">Wednesday </h5><p class="weekbutton show" target="33">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="34">Thursday </h5><p class="weekbutton show" target="34">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="35">Friday </h5><p class="weekbutton show"  target="35">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div31" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Mechanical Drafting 1</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Mechanical Applications</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Autocad</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Architectural Appl Sotware 1</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>                 
+                            </ul>
+                            </div>
+
+                            <div id="div32" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 10:20 am:</strong> Architectural Drafting 1</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Travelogue Presentation</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Autocade</li>                         
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Mechanical Drafting 3</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div33" class="targetDiv">
+                            <ul>                   
+                            <li><strong>7:20 am - 10:20 am:</strong> Mechanical Drafting 1</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web Authoring Design</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Autocad</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Architectural Appl Sotware 2</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                             
+                            <div id="div34" class="targetDiv">
+                            <ul>                  
+                            <li><strong>8:20 am - 10:20 am:</strong>Adv Interactive Technologies</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Autocad</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Architectural Appl Sotware 2</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Supplementary Mathematics</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div35" class="targetDiv">
+                            <ul>
+                            <li><strong>8:20 am - 10:20 am:</strong> Architectural Drafting 1</li>
+                            <li><strong>10:30 am - 11:20 am:</strong> Steps to Career Success 1</li>
+                            <li><strong>11:30 am - 12:20 pm:</strong> Steps to Career Success 3</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Autocad</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Architectural Appl Sotware 2</li>
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="nineButton">Get Directions</a>                
+                	<a href="#" id="nineClose">Close</a>
+                	</div>
+                 </div>
+                
+                <div id= "fourteenPopUp" class="pop">
+                <div class="roomTypePop">
+                    	<div class="colorPop1"></div>
+                        <div class="roomNumberPop"><h3>#508</h3></div>                  		
+                        <div class="roomNamePop">Graphic Design Lab</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_508.JPG" alt="image of room 508, a graphic design lab" />	
+                    </div>
+               		<div class="roomDetails"> 
+                		<div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="70">Monday </h5><p class="weekbutton show" target="70">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="71">Tuesday </h5><p class="weekbutton show" target="71">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="72">Wednesday </h5><p class="weekbutton show" target="72">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="73">Thursday </h5><p class="weekbutton show" target="73">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="74">Friday </h5><p class="weekbutton show"  target="74">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div70" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 11:20 am:</strong> Med/Surg Nursing Care of Adult</li>
+                            <li><strong>11:30 am - 12:20 pm:</strong> Surgical Technology 4</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Human Relations in Org</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Chart Abstracting & Coding</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>             
+                            </ul>
+                            </div>
+
+                            <div id="div71" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 11:20 am:</strong> Anatomy & Physiology 2</li>
+                            <li><strong>11:30 am - 12:20 am:</strong> Principles of Writing</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Care of Adults w/Chronic...</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Critical Thinking</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div72" class="targetDiv">
+                            <ul>                   
+                            <li><strong>7:20 am - 11:20 am:</strong> Primary Care & Wellness</li>
+                            <li><strong>11:30 am - 12:20 am:</strong> Open</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Fund of Ckng/sanitation/sfty</li>                 
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Critical Thinking</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                       
+                            <div id="div73" class="targetDiv">
+                            <ul> 
+                             <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Personal Finance</li>  
+                            <li><strong>10:30 am - 12:20 pm:</strong> Microbiology</li>  
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Chart Abstracting & Coding</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> English Comp 2</li> 
+                            <li><strong>4:40 pm - 5:30 pm:</strong> Open</li> 
+                            <li><strong>5:45 pm - 11:00 pm:</strong> Meetings</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div74" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> History of Technology</li>  
+                            <li><strong>10:30 am - 12:20 pm:</strong> Principles of Mgmt</li>  
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Physical Science</li>
+                            <li><strong>2:40 pm - 3:30 pm:</strong> Career Development</li> 
+                            <li><strong>3:40 pm - 11:00 pm:</strong> Open</li> 
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="fourteenButton">Get Directions</a>                
+                	<a href="#" id="fourteenClose">Close</a>
+                	</div>   
+             </div>
+                
+                
+                <div id= "thirteenPopUp" class="pop">
+                	<div class="roomTypePop">
+                    	<div class="colorPop1"></div>
+                        <div class="roomNumberPop"><h3>#510</h3></div>                  		
+                        <div class="roomNamePop">Safety and Security</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_510.JPG" alt="image of room 510, an instruction lab" />	
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="6">Monday </h5><p class="weekbutton show" target="6">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="7">Tuesday </h5><p class="weekbutton show" target="7">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="8">Wednesday </h5><p class="weekbutton show" target="8">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="9">Thursday </h5><p class="weekbutton show" target="9">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="10">Friday </h5><p class="weekbutton show"  target="10">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div6" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+
+                            <div id="div7" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> TUESDAY WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div8" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> WED WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                             
+                            <div id="div9" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> thurs WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div10" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Friday WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="thirteenButton">Get Directions</a>                
+                	<a href="#" id="thirteenClose">Close</a>
+                	</div>
+                </div>
+                
+                <div id= "twelvePopUp" class="pop">
+                	<div class="roomTypePop">
+                    	<div class="colorPop1"></div>
+                        <div class="roomNumberPop"><h3>#512</h3></div>                  		
+                        <div class="roomNamePop">Graphic Design</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_512.JPG" alt="image of room 512, an instruction lab" />	
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="11">Monday </h5><p class="weekbutton show" target="11">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="12">Tuesday </h5><p class="weekbutton show" target="12">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="13">Wednesday </h5><p class="weekbutton show" target="13">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="14">Thursday </h5><p class="weekbutton show" target="14">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="15">Friday </h5><p class="weekbutton show"  target="15">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div11" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+
+                            <div id="div12" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> TUESDAY WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div13" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> WED WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                             
+                            <div id="div14" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> thurs WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div15" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Friday WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="twelveButton">Get Directions</a>                
+                	<a href="#" id="twelveClose">Close</a>
+                	</div>
+              </div>
+                
                 <div id= "tenPopUp" class="pop">
-                <h3>#514</h3><p>Graphic Design Studio</p>
-                 <img src="img/PHOTO_514.JPG" alt="image of room 514, an instruction lab" /> 
-                <a href="#">Get Diretions"</a><a href="#">Close</a></div>
-            </div>
+                	<div class="roomTypePop">
+                    	<div class="colorPop1"></div>
+                        <div class="roomNumberPop"><h3>#504</h3></div>                  		
+                        <div class="roomNamePop">Graphic Design Lab</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_504.JPG" alt="image of room 504, an instruction lab" />	
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="16">Monday </h5><p class="weekbutton show" target="16">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="17">Tuesday </h5><p class="weekbutton show" target="17">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="18">Wednesday </h5><p class="weekbutton show" target="18">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="19">Thursday </h5><p class="weekbutton show" target="19">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="20">Friday </h5><p class="weekbutton show"  target="20">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div16" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+
+                            <div id="div17" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> TUESDAY WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div18" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> WED WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                             
+                            <div id="div19" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> thurs WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div20" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Friday WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="tenButton">Get Directions</a>                
+                	<a href="#" id="tenClose">Close</a>
+                	</div>
+                </div>
+                <div id= "elevenPopUp" class="pop">
+                	<div class="roomTypePop">
+                    	<div class="colorPop1"></div>
+                        <div class="roomNumberPop"><h3>#502</h3></div>                  		
+                        <div class="roomNamePop">Safety and Security</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_508.JPG" alt="image of room 502, an instruction lab" />	
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="21">Monday </h5><p class="weekbutton show" target="21">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="22">Tuesday </h5><p class="weekbutton show" target="22">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="23">Wednesday </h5><p class="weekbutton show" target="23">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="24">Thursday </h5><p class="weekbutton show" target="24">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="25">Friday </h5><p class="weekbutton show"  target="25">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div21" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Open</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+
+                            <div id="div22" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> TUESDAY WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div23" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> WED WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                             
+                            <div id="div24" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> thurs WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div25" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 8:10 am:</strong> Friday WORKS</li>
+                            <li><strong>8:20 am - 10:20 am:</strong> Web/Int Portfolio Dev</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Web/Int Senior Proj</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Intro to Media Technologies</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Structural App Software</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="elevenButton">Get Directions</a>                
+                	<a href="#" id="elevenClose">Close</a>
+                	</div>
+                </div>
+                
+         		<div id= "fifteenPopUp" class="pop">
+                	<div class="roomTypePop">
+                    	<div class="colorPop1"></div>
+                        <div class="roomNumberPop"><h3>#501</h3></div>                  		
+                        <div class="roomNamePop">Safety and Security</div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_508.JPG" alt="image of room 501, an instruction lab" />	
+                    </div>
+               		<div class="roomDetails">                		
+                        <div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="26">Monday </h5><p class="weekbutton show" target="26">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="27">Tuesday </h5><p class="weekbutton show" target="27">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="28">Wednesday </h5><p class="weekbutton show" target="28">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="29">Thursday </h5><p class="weekbutton show" target="29">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="30">Friday </h5><p class="weekbutton show"  target="30">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div26" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 9:10 am:</strong> Surgical Technology 5</li>
+                            <li><strong>9:30 am - 11:20 am:</strong> Financial Accounting 1</li>
+                            <li><strong>11:30 am - 1:20 pm:</strong> Critical Thinking</li>
+                            <li><strong>1:30 pm - 3:30 pm:</strong> Critical Thinking</li>
+                            <li><strong>3:40 pm - 11:00 pm:</strong> Open</li>                 
+                            </ul>
+                            </div>
+
+                            <div id="div27" class="targetDiv">
+                            <ul>
+                            <li><strong>8:20 am - 10:20 am:</strong> Psychology</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Social Problems</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Sickness and Health</li>                         
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Algebra</li>
+                            <li><strong>4:40 pm - 10:25 pm:</strong> Meetings</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div28" class="targetDiv">
+                            <ul>                   
+                            <li><strong>8:20 am - 10:20 am:</strong> Financial Accounting 1</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Steps to Career Success 1</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Introduction to Massage</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Personal Fiance</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                             
+                            <div id="div29" class="targetDiv">
+                            <ul>                  
+                            <li><strong>8:20 am - 10:20 am:</strong>History of Technology</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> Pharmacology</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Social Problems</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Healthcare Delivery</li>
+                            <li><strong>4:40 pm - 10:25 pm:</strong> Meetings</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div30" class="targetDiv">
+                            <ul>
+                            <li><strong>8:20 am - 10:20 am:</strong> English Composition 1</li>
+                            <li><strong>10:30 am - 12:20 pm:</strong> English Composition 1</li>
+                            <li><strong>12:30 pm - 2:20 pm:</strong> Leadership Principles</li>
+                            <li><strong>2:40 pm - 4:30 pm:</strong> Diseases & Diagnostics Methods</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="fifteenButton">Get Directions</a>                
+                	<a href="#" id="fifteenClose">Close</a>
+                	</div>
+                </div>
+                
+                <div id= "militaryPopUp" class="pop">
+                	 <div class="roomTypePop">
+                    	<!--<div class="colorPop1"></div>-->
+                        <div class="roomNumberPop"><h3>Military Louge</h3></div>                  		
+                        <div class="roomNamePop"></div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_MilitaryL.JPG" alt="image of the gallery." />	
+                    </div>
+               		<div class="roomDetails"> 
+                		<div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="75">Monday </h5><p class="weekbutton show" target="75">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="76">Tuesday </h5><p class="weekbutton show" target="76">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="77">Wednesday </h5><p class="weekbutton show" target="77">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="78">Thursday </h5><p class="weekbutton show" target="78">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="79">Friday </h5><p class="weekbutton show"  target="79">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div75" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 11:00 pm:</strong> Open</li>             
+                            </ul>
+                            </div>
+
+                            <div id="div76" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div77" class="targetDiv">
+                            <ul>                   
+                            <li><strong>7:20 am - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                       
+                            <div id="div78" class="targetDiv">
+                            <ul> 
+                             <li><strong>7:20 am - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div79" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 11:00 pm:</strong> Open</li> 
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="getMilitary">Get Directions</a>                
+                	<a href="#" id="closeMilitary">Close</a>
+                	</div> 
+                </div>
+                <div id= "ladiesPopUp" class="pop">
+                	<div class="roomTypePop">
+                    	<!--<div class="colorPop1"></div>-->
+                        <div class="roomNumberPop"><h3>Women's Restroom</h3></div>                  		
+                        <div class="roomNamePop"></div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_wRoom.JPG" alt="image of the Women's Bathroom enterance." />	
+                    </div>
+               		<div class="roomDetails"> 
+                		<div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+                            <h4>This is always open to all females!</h4>
+				           
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="ladiesButton">Get Directions</a>                
+                	<a href="#" id="ladiesClose">Close</a>
+                	</div> 
+                </div>
+                <div id= "mensPopUp" class="pop">
+                	<div class="roomTypePop">
+                    	<!--<div class="colorPop1"></div>-->
+                        <div class="roomNumberPop"><h3>Men's Restroom</h3></div>                  		
+                        <div class="roomNamePop"></div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_mRoom.JPG" alt="image of the Men's Bathroom enterance." />	
+                    </div>
+               		<div class="roomDetails"> 
+                		<div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+                            <h4>This is always open to all males!</h4>
+				           
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="mensButton">Get Directions</a>                
+                	<a href="#" id="mensClose">Close</a>
+                	</div>
+				</div>
+                <div id= "galleryPopUp" class="pop">
+                	<div class="roomTypePop">
+                    	<!--<div class="colorPop1"></div>-->
+                        <div class="roomNumberPop"><h3>Gallery</h3></div>                  		
+                        <div class="roomNamePop"></div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_gallery.JPG" alt="image of the gallery." />	
+                    </div>
+               		<div class="roomDetails"> 
+                		<div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="80">Monday </h5><p class="weekbutton show" target="80">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="81">Tuesday </h5><p class="weekbutton show" target="81">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="82">Wednesday </h5><p class="weekbutton show" target="82">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="83">Thursday </h5><p class="weekbutton show" target="83">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="84">Friday </h5><p class="weekbutton show"  target="84">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div80" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 11:00 pm:</strong> Open</li>             
+                            </ul>
+                            </div>
+
+                            <div id="div81" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 11:20 am:</strong> Open</li>
+                            <li><strong>11:30 am - 12:20 am:</strong> Softball Sign-ups</li>
+                            <li><strong>12:30 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div82" class="targetDiv">
+                            <ul>                   
+                            <li><strong>7:20 am - 12:20 am:</strong> Open</li>
+                            <li><strong>12:30 pm - 4:30 pm:</strong> Central Blood Bank Drive</li>
+                            <li><strong>4:40 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                       
+                            <div id="div83" class="targetDiv">
+                            <ul> 
+                             <li><strong>7:20 am - 11:30 am:</strong> Open</li>
+                            <li><strong>11:30 am - 12:20 pm:</strong> Baseball Sign-ups</li>  
+                            <li><strong>12:30 pm - 11:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div84" class="targetDiv">
+                            <ul>
+                            <li><strong>7:20 am - 11:00 pm:</strong> Open</li> 
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div> 
+                    <div class="buttons">               
+                	<a href="#" id="getGallery">Get Directions</a>                
+                	<a href="#" id="galleryClose">Close</a>
+                	</div>              
+                </div>
+                
+                <div id="libraryPopUp" class="pop">
+                	<div class="roomTypePop">
+                    	<!--<div class="colorPop1"></div>-->
+                        <div class="roomNumberPop"><h3>Library</h3></div>                  		
+                        <div class="roomNamePop"></div>
+                    </div>
+                    <div class="roomImage">
+                        	<img src="img/PHOTO_Library.JPG" alt="image of the library." />	
+                    </div>
+                	<div class="roomDetails"> 
+                		<div class="roomSchedule">
+                            <h3>Room Schedule</h3>
+				            <div class="weekDays">
+                            	<div class="weekDay1"><h5 class="show" target="85">Monday </h5><p class="weekbutton show" target="85">+</p></div>
+                                <div class="weekDay2"><h5 class="show" target="86">Tuesday </h5><p class="weekbutton show" target="86">+</p></div>
+                                <div class="weekDay3"><h5 class="show" target="87">Wednesday </h5><p class="weekbutton show" target="87">+</p></div>
+                                <div class="weekDay4"><h5 class="show" target="88">Thursday </h5><p class="weekbutton show" target="88">+</p></div>
+                                <div class="weekDay5"><h5 class="show" target="89">Friday </h5><p class="weekbutton show"  target="89">+</p></div>
+                            </div>    
+                                                              
+                            <div id="div85" class="targetDiv">
+                            <ul>
+                            <li><strong>7:00 am - 7:00 pm:</strong> Open</li>            
+                            </ul>
+                            </div>
+
+                            <div id="div86" class="targetDiv">
+                            <ul>
+                            <li><strong>7:00 am - 7:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                            
+                            <div id="div87" class="targetDiv">
+                            <ul>                   
+                            <li><strong>7:00 am - 7:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                                       
+                            <div id="div88" class="targetDiv">
+                            <ul> 
+                             <li><strong>7:00 am - 7:00 pm:</strong> Open</li>
+                            </ul>
+                            </div>
+                            
+                            <div id="div89" class="targetDiv">
+                            <ul>
+                            <li><strong>7:00 am - 5:00 pm:</strong> Open</li> 
+                            </ul>
+                            </div>
+                        </div>                        
+                	</div>
+                    
+                	<div class="buttons">               
+                	<a href="#" id="getlibrary">Get Directions</a>                
+                	<a href="#" id="libraryClose">Close</a>
+                	</div>  
+                </div>
+         
             
-            <div id="restart"><a href="#" class="done">Done</a></div>
+            <div id="restart"><a href="javascript:location.reload(true)" class="done">Done</a></div>
             
             
         </div><!--end #activeArea-->
     </div><!--end Canvas-->
-	
+	<script>
+$('.targetDiv').hide();
+    $('.show').click(function () {
+        $('#div' + $(this).attr('target')).toggle('').siblings('.targetDiv').hide('');
+    });
+	</script>
     
-   
+	<footer>
+    <img id="credits" alt="an animated GIF informing users who created this awesome interatice map" src="img/credits.gif">
+    </footer>   
  <script src="js/script.js"></script>  
 </body>
 </html>
